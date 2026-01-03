@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyA6NWL-73bLEe1Hm496FSq3qWfI5yeYLU4";
+const API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 const TOTAL_QUESTIONS = 5;
 let topic = "";
 let current = 0;
@@ -245,3 +245,4 @@ function getPerformanceMessage(score, total) {
   if (percent >= 40) return "Not bad, you can do better.";
   return "Keep learning and try again!";
 }
+
