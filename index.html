@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div class="header-left">
+       <span>AI Quiz</span>
+    </div>
+    <div class="header-right">
+      <span class="pill">AI Powered</span>
+    </div>
+  </header>
+
+  <div class="app-bg">
+    <div class="quiz-card">
+      <div id="start" class="start-screen">
+        <h1 class="title">AI Quiz</h1>
+        <input id="topic" placeholder="Enter topic (e.g. JavaScript)" />
+        <button class="btn-primary" onclick="startQuiz()">Start Quiz</button>
+      </div>
+      <div id="quiz" class="hidden">
+
+        <div class="top-bar">
+          <span id="level" class="badge">Level: Easy</span>
+          <span id="timer" class="timer">60s</span>
+        </div>
+
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+        <div class="question-wrapper">
+          <h2 id="question" class="question"></h2>
+        </div>
+        <div id="options" class="options"></div>
+
+        <button class="btn-next" onclick="nextQuestion()">Next</button>
+        <p id="statusMsg" class="status hidden"></p>
+      </div>
+      <div id="result" class="hidden result-screen">
+
+        <div class="result-icon"></div>
+
+        <h2 class="result-title">Quiz Completed</h2>
+
+        <p class="result-score">
+          You scored <span id="score"></span>
+        </p>
+        <div class="score-bar">
+          <div id="scoreFill"></div>
+        </div>
+        <p class="score-percent" id="scorePercent"></p>
+        <div class="mini-chart">
+          <div class="bar correct">
+            <span id="correctCount"></span>
+            <small>Correct</small>
+          </div>
+          <div class="bar wrong">
+            <span id="wrongCount"></span>
+            <small>Wrong</small>
+          </div>
+        </div>
+
+        <p id="performanceText" class="performance"></p>
+
+        <div class="result-actions">
+          <button class="btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+          <button class="btn-secondary" onclick="location.reload()">New Topic</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <footer class="app-footer">
+    <p>© 2026 AI Quiz</p>
+    <p class="footer-small">Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
